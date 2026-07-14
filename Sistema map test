@@ -1,0 +1,58 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.io.IOException;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import modelo.Aluno;
+import modelo.SistemaMap;
+
+/**
+ * Classe de testes da classe SistemaMap.
+ *
+ * @author Seu Nome
+ * @version 1.0
+ */
+public class SistemaMapTest {
+
+    private SistemaMap sistema;
+
+    /**
+     * Executado antes de cada teste.
+     */
+    @BeforeEach
+    public void inicializar() {
+        sistema = new SistemaMap();
+    }
+
+    /**
+     * Testa o cadastro e a pesquisa de um aluno.
+     */
+    @Test
+    public void testeCadastrarAluno() {
+
+        Aluno aluno = new Aluno(
+                "2024001",
+                "João Silva",
+                "Computação",
+                20);
+
+        sistema.cadastrarAluno(aluno);
+
+        Aluno resultado = sistema.pesquisarAluno("2024001");
+
+        assertNotNull(resultado);
+        assertEquals("João Silva", resultado.getNome());
+        assertEquals("Computação", resultado.getCurso());
+        assertEquals(20, resultado.getIdade());
+
+    }
+
+    /**
+     * Testa a remoção de um aluno.
+     */
+    @Test
+    public void testeRemoverAluno() {
+
+       
