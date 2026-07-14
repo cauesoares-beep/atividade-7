@@ -1,0 +1,39 @@
+# Arquivos compilados Java
+*.class
+
+# Arquivos JAR, WAR e EAR
+*.jar
+*.war
+*.ear
+
+# Diretório de compilação
+bin/
+build/
+out/
+target/
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.tmp
+*.bak
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de persistência (gerados durante a execução)
+*.dat
